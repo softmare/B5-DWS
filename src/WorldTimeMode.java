@@ -94,4 +94,9 @@ public class WorldTimeMode implements Mode {
     public void OnInitThisMode() {
 
     }
+
+    @Override
+    public String toString(){
+        return "WORLD";
+    }
 }

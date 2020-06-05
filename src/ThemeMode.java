@@ -50,4 +50,9 @@ public class ThemeMode implements Mode{
     public void OnInitThisMode() {
 
     }
+
+    @Override
+    public String toString(){
+        return "THEME";
+    }
 }

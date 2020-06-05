@@ -238,14 +238,22 @@ public class TimerMode implements Mode{
         }
         if(!is_timer_started){
             segment.setSegmentUpper("SET TIMER",true);
-            segment.setSegmentLower(setted_time.getMinute() + ":" + setted_time.getSeconds(),true);
+            segment.setSegmentLower(setted_time.makeSugarStringDay().substring(3),true);
         }else{
-            segment.setSegmentLower(((int)(total_seconds / 60)) + ":" + (total_seconds % 60),true);
+            int min, sec;
+            min = ((int)(total_seconds / 60));
+            sec = (total_seconds % 60);
+            segment.setSegmentLower( (min < 10? "0" + min:min)+ ":" + (sec < 10? "0" + sec:sec),true);
             if(is_timer_running){
                 segment.setSegmentUpper("RUNNING",true);
             }else{
                 segment.setSegmentUpper("PAUSE",true);
             }
         }
+    }
+
+    @Override
+    public String toString(){
+        return "TIMER";
     }
 }

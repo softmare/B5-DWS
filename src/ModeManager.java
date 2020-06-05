@@ -129,7 +129,7 @@ public class ModeManager implements Mode{
     public void displayCurrentMode(){
         String upperContent, lowerContent;
         upperContent = "      " + (mode_index + 1) + "     ";
-        lowerContent = used_modes[mode_index].getClass().getName();
+        lowerContent = used_modes[mode_index].toString();
         segment.setSegmentLower(lowerContent, true);
         segment.setSegmentUpper(upperContent, true);
     }
@@ -176,8 +176,8 @@ public class ModeManager implements Mode{
     @Override
     public void OnInitThisMode() {
         String upperContent, lowerContent;
-        upperContent = unused_modes[0].getClass().getName().substring(0,4) + "    " + unused_modes[1].getClass().getName().substring(0,4);
-        lowerContent = used_modes[mode_index].getClass().getName();
+        upperContent = unused_modes[0].toString().substring(0,4) + "    " + unused_modes[1].toString().substring(0,4);
+        lowerContent = used_modes[mode_index].toString();
         segment.setSegmentLower(lowerContent, true);
         segment.setSegmentUpper(upperContent, true);
     }

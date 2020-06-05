@@ -35,8 +35,8 @@ public class CurrentTimeMode implements Mode{
     private void SyncWithCurrentTime() {
         Time curr_time;
         curr_time = timeManager.getCurrentTime();
-        segment.setSegmentUpper(curr_time.getYear() +"." + curr_time.getMounth() + "." +curr_time.getDay(), true);
-        segment.setSegmentLower(curr_time.getHour()+ ":" + curr_time.getMinute() + ":" + curr_time.getSeconds(), true);
+        segment.setSegmentUpper(curr_time.makeSugarStringYear(), true);
+        segment.setSegmentLower(curr_time.makeSugarStringDay(), true);
     }
 
     @Override
@@ -62,5 +62,10 @@ public class CurrentTimeMode implements Mode{
     @Override
     public void OnInitThisMode() {
         is_watch_running = true;
+    }
+
+    @Override
+    public String toString(){
+        return "WATCH";
     }
 }

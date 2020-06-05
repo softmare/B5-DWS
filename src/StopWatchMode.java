@@ -196,16 +196,21 @@ public class StopWatchMode implements Mode{
 
     private void displayStopWatchState(){
         if(!is_stop_watch_started){
-            segment.setSegmentUpper("StopWatch",true);
+            segment.setSegmentUpper("STOPWATCH",true);
             segment.setSegmentLower("00:00",true);
         }else{
             if(is_stop_watch_running){
-                segment.setSegmentUpper("Running",true);
-                segment.setSegmentLower(  elapsed_time.getMinute() + ":"+ elapsed_time.getSeconds(),true);
+                segment.setSegmentUpper("RUNNING",true);
+                segment.setSegmentLower(  elapsed_time.makeSugarStringDay().substring(3),true);
             }else{
-                segment.setSegmentUpper("Paused",true);
-                segment.setSegmentLower(  elapsed_time.getMinute() + ":"+ elapsed_time.getSeconds(),true);
+                segment.setSegmentUpper("PAUSED",true);
+                segment.setSegmentLower(  elapsed_time.makeSugarStringDay().substring(3),true);
             }
         }
+    }
+
+    @Override
+    public String toString(){
+        return "STOP";
     }
 }

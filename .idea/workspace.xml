@@ -25,43 +25,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d4f68cd-6d3f-4a4c-9105-7235457d20d3" name="Default Changelist" comment="Time Class Fixed">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Alarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AlarmMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CurrentTimeMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StopWatchMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThemeMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimerMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WatchGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorldTimeMode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/Buzzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/META-INF/B5-DWS.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/ModeManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/ModeManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/ModeManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/ModeManager$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/CurrentTimeMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/CurrentTimeMode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/ModeManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/ModeManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/StopWatchMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/StopWatchMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/ThemeMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/ThemeMode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/Time.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/Time.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/Watch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buzzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buzzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/TimerMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/TimerMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/WorldTimeMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B5-DWS/WorldTimeMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Alarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Alarm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AlarmMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlarmMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CurrentTimeMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrentTimeMode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ModeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Watch.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Watch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StopWatchMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StopWatchMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThemeMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThemeMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimerMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimerMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldTimeMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldTimeMode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,42 +193,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="330" key="FileChooserDialogImpl/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591281329056" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1591343247933">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591287332047" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591343247933" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1591343247933">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591287332047" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591343247933" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1591343247933">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591287332047" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591343247933" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1591343247933">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591287332047" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591343247933" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1591334578330">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591334578330" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1591334578329">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591334578329" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1591334578329">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591334578329" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1591334578329">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1591346654218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591334578329" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591346654218" />
     <state x="202" y="63" key="MergeDialog" timestamp="1591171460555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

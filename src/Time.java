@@ -98,9 +98,51 @@ public class Time {
         year += target.getYear();
     }
 
+    public String makeSugarStringDay(){
+        String temp, buffer;
+        buffer = hour + "";
+        temp = "";
+        if(buffer.length() < 2){
+            buffer = "0" + buffer;
+        }
+        temp += buffer;
+        temp += ":";
+        buffer = minute + "";
+        if(buffer.length() < 2){
+            buffer = "0" + buffer;
+        }
+        temp += buffer;
+        temp += ":";
+        buffer = seconds + "";
+        if(buffer.length() < 2){
+            buffer = "0" + buffer;
+        }
+        temp += buffer;
+        return temp;
+    }
 
-
-
+    public String makeSugarStringYear(){
+        String temp, buffer;
+        buffer = year + "";
+        temp = "";
+        while(buffer.length() < 4){
+            buffer = "0" + buffer;
+        }
+        temp += buffer;
+        temp += ":";
+        buffer = mounth + "";
+        if(buffer.length() < 2){
+            buffer = "0" + buffer;
+        }
+        temp += buffer;
+        temp += ":";
+        buffer = day + "";
+        if(buffer.length() < 2){
+            buffer = "0" + buffer;
+        }
+        temp += buffer;
+        return temp;
+    }
 
     public static int convertMinuteToSeconds(int minute){
         return minute * 60;

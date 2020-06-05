@@ -160,18 +160,18 @@ public class AlarmMode implements Mode{
                 }
             }
         };
-        button_b = (new ButtonActionCallback() {
+        button_b = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {
                 nextAlarm();
             }
-        });
-        button_c = (new ButtonActionCallback() {
+        };
+        button_c = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {
                 deleteAlarm();
             }
-        });
+        };
     }
 
     void nextAlarm(){
@@ -224,5 +224,10 @@ public class AlarmMode implements Mode{
     private void displayCurrentAlarm(){
         segment.setSegmentUpper((alarm_index + 1) + "    " + alarms[alarm_index].getState() , true);
         segment.setSegmentLower(alarms[alarm_index].hour + ":" + alarms[alarm_index].minute, true);
+    }
+
+    @Override
+    public String toString(){
+        return "ALARM";
     }
 }
