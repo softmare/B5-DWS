@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.IllegalFormatCodePointException;
 
 public class Time {
     private int seconds, minute, hour;
@@ -91,11 +92,26 @@ public class Time {
 
     public void addTime(Time target){
         seconds += target.getSeconds();
+        if(seconds < 0){
+            seconds += 24;
+        }
+        if(seconds > 23){
+            seconds -= 24;
+        }
         minute += target.getMinute();
+        if(minute < 0){
+            minute += 24;
+        }
+        if(minute > 23){
+            minute -= 24;
+        }
         hour += target.getHour();
-        day += target.getDay();
-        mounth += target.getMounth();
-        year += target.getYear();
+        if(hour < 0){
+            hour += 24;
+        }
+        if(hour > 23){
+            hour -= 24;
+        }
     }
 
     public String makeSugarStringDay(){

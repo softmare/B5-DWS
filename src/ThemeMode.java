@@ -13,8 +13,8 @@ public class ThemeMode implements Mode{
         themes[0] = new Theme(Color.LIGHT_GRAY,Color.DARK_GRAY,"DEFAULT");
         themes[1] = new Theme(Color.DARK_GRAY,Color.LIGHT_GRAY,"MODERN");
         themes[2] = new Theme(Color.CYAN,Color.DARK_GRAY,"NEON1");
-        themes[3] = new Theme(Color.GREEN,Color.DARK_GRAY,"NEON2");
-        themes[4] = new Theme(Color.ORANGE,Color.PINK,"SPRING");
+        themes[3] = new Theme(Color.RED,Color.DARK_GRAY,"NEON2");
+        themes[4] = new Theme(Color.YELLOW,Color.PINK,"SPRING");
         themes[5] = new Theme(Color.WHITE,Color.CYAN,"SUMMER");
         themes[6] = new Theme(Color.ORANGE,Color.MAGENTA,"TROPICAL");
         themes[7] = new Theme(Color.CYAN,Color.BLUE,"DEEP SEA");

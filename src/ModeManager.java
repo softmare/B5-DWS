@@ -21,7 +21,7 @@ public class ModeManager implements Mode{
         instance = ModeManagerInteracter.getInstance();
         registerCallback();
         used_modes[0] = new CurrentTimeMode(segment);
-        used_modes[1] = new WorldTimeMode();
+        used_modes[1] = new WorldTimeMode(segment);
         used_modes[2] = new StopWatchMode(segment);
         used_modes[3] = new TimerMode(segment);
         unused_modes[0] = new ThemeMode(segment);
