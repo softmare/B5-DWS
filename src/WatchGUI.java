@@ -1,15 +1,16 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import javax.swing.SwingConstants;
 
 public class WatchGUI extends JFrame {
@@ -43,7 +44,16 @@ public class WatchGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		Font font = null;
+		try {
+			InputStream is = this.getClass().getClassLoader().getResourceAsStream("DIGITALDREAM.ttf");
+			GraphicsEnvironment ge =
+					GraphicsEnvironment.getLocalGraphicsEnvironment();
+			ge.registerFont(Font.createFont(Font.PLAIN, is));
+		} catch (IOException |FontFormatException e) {
+			e.printStackTrace();
+		}
+
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.DARK_GRAY);
 		panel.setBounds(74, 10, 400, 100);
@@ -58,7 +68,7 @@ public class WatchGUI extends JFrame {
 		
 		JLabel lower_segment = new JLabel("00000000");
 		lower_segment.setHorizontalAlignment(SwingConstants.CENTER);
-		lower_segment.setFont(new Font("±¼¸²", Font.PLAIN, 35));
+		lower_segment.setFont(new Font("Digital dream", Font.TRUETYPE_FONT, 35));
 		lower_segment.setForeground(Color.LIGHT_GRAY);
 		lower_segment.setBounds(0, 0, 376, 44);
 		lower_panel.add(lower_segment);
@@ -71,7 +81,7 @@ public class WatchGUI extends JFrame {
 		
 		JLabel upper_segment = new JLabel("000000000000");
 		upper_segment.setHorizontalAlignment(SwingConstants.CENTER);
-		upper_segment.setFont(new Font("±¼¸²", Font.PLAIN, 24));
+		upper_segment.setFont(new Font("Digital dream", Font.TRUETYPE_FONT, 24));
 		upper_segment.setBounds(0, 0, 376, 26);
 		upper_panel.add(upper_segment);
 		upper_segment.setForeground(Color.LIGHT_GRAY);

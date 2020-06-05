@@ -222,8 +222,11 @@ public class AlarmMode implements Mode{
 
 
     private void displayCurrentAlarm(){
+        int hour, min;
+        hour = alarms[alarm_index].hour;
+        min = alarms[alarm_index].minute;
         segment.setSegmentUpper((alarm_index + 1) + "    " + alarms[alarm_index].getState() , true);
-        segment.setSegmentLower(alarms[alarm_index].hour + ":" + alarms[alarm_index].minute, true);
+        segment.setSegmentLower( ((hour < 10)?"0" + hour : hour)+ ":" + ((min < 10)?"0" + min : min), true);
     }
 
     @Override
