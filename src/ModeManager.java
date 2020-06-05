@@ -24,7 +24,7 @@ public class ModeManager implements Mode{
         used_modes[1] = new WorldTimeMode();
         used_modes[2] = new StopWatchMode(segment);
         used_modes[3] = new TimerMode(segment);
-        unused_modes[0] = new ThemeMode();
+        unused_modes[0] = new ThemeMode(segment);
         unused_modes[1] = new AlarmMode(segment);
         ((CurrentTimeMode)used_modes[0]).InitCurrentTimeMode();
         ((WorldTimeMode)used_modes[1]).initWorldTimeMode();

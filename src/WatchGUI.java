@@ -141,6 +141,11 @@ public class WatchGUI extends JFrame {
 				while(true){
 					upper_segment.setText(system.getSegmentContentUpper());
 					lower_segment.setText(system.getSegmentContentLower());
+					upper_segment.setForeground(system.getTextColor());
+					lower_segment.setForeground(system.getTextColor());
+					upper_panel.setBackground(system.getBackGroundColor());
+					lower_panel.setBackground(system.getBackGroundColor());
+					panel.setBackground(system.getBackGroundColor());
 					try {
 						Thread.sleep(50);
 					} catch (InterruptedException e) {
