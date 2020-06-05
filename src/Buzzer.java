@@ -9,8 +9,16 @@ public class Buzzer {
     private Thread reserve;
     private ModeManagerInteracter instance;
     private final static long RESERVE_OFF_TIME_IN_MIL = 30000;
+    private static Buzzer singleton;
 
-    public Buzzer(){
+    public static Buzzer getInstance(){
+        if(singleton == null){
+            singleton = new Buzzer();
+        }
+        return singleton;
+    }
+
+    private Buzzer(){
         sound_player = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -61,7 +69,7 @@ public class Buzzer {
                     Thread.sleep(RESERVE_OFF_TIME_IN_MIL);
                     OffBuzzer();
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+
                 }
             }
         });

@@ -20,6 +20,19 @@ public class ModeManager implements Mode{
     public void initWatch(){
         instance = ModeManagerInteracter.getInstance();
         registerCallback();
+        used_modes[0] = new CurrentTimeMode(segment);
+        used_modes[1] = new WorldTimeMode();
+        used_modes[2] = new StopWatchMode(segment);
+        used_modes[3] = new TimerMode(segment);
+        unused_modes[0] = new ThemeMode();
+        unused_modes[1] = new AlarmMode(segment);
+        ((CurrentTimeMode)used_modes[0]).InitCurrentTimeMode();
+        ((WorldTimeMode)used_modes[1]).initWorldTimeMode();
+        ((StopWatchMode)used_modes[2]).initStopWatchMode();
+        ((TimerMode)used_modes[3]).initTimerMode();
+        ((ThemeMode)unused_modes[0]).initThemeMode();
+        ((AlarmMode)unused_modes[1]).initAlarmMode();
+        displayCurrentMode();
     }
 
     public void requestButtonA(){
@@ -115,7 +128,7 @@ public class ModeManager implements Mode{
 
     public void displayCurrentMode(){
         String upperContent, lowerContent;
-        upperContent = "      " + mode_index + "     ";
+        upperContent = "      " + (mode_index + 1) + "     ";
         lowerContent = used_modes[mode_index].getClass().getName();
         segment.setSegmentLower(lowerContent, true);
         segment.setSegmentUpper(upperContent, true);
