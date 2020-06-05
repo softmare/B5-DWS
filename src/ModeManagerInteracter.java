@@ -25,10 +25,12 @@ public class ModeManagerInteracter {
 
 
     public void activeReserveForcedAction(StandardCallback callback){
+        if(forced_action != null)
         forced_action.IvokeMethod(callback);
     }
 
     public void activeCancelForceAction(){
+        if(cancel_forced != null)
         cancel_forced.CallbackFunction();
     }
 }

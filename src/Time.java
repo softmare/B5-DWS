@@ -13,6 +13,14 @@ public class Time {
         this.day = 0;
     }
 
+    public Time(int seconds, int minute, int hour, int day, int mounth, int year){
+        this.seconds = seconds;
+        this.minute = minute;
+        this.hour = hour;
+        this.day = day;
+        this.mounth = mounth;
+        this.year = year;
+    }
 
     public Time(LocalDateTime time){
         this.seconds = time.getSecond();
@@ -81,6 +89,14 @@ public class Time {
         this.day = day;
     }
 
+    public void addTime(Time target){
+        seconds += target.getSeconds();
+        minute += target.getMinute();
+        hour += target.getHour();
+        day += target.getDay();
+        mounth += target.getMounth();
+        year += target.getYear();
+    }
 
 
 

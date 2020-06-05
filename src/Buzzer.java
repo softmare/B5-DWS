@@ -59,6 +59,7 @@ public class Buzzer {
             public void run() {
                 try {
                     Thread.sleep(RESERVE_OFF_TIME_IN_MIL);
+                    OffBuzzer();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
