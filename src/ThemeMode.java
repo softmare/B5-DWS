@@ -10,14 +10,14 @@ public class ThemeMode implements Mode{
     }
 
     void initThemeMode() {
-        themes[0] = new Theme(Color.LIGHT_GRAY,Color.DARK_GRAY,"DEFAULT");
-        themes[1] = new Theme(Color.DARK_GRAY,Color.LIGHT_GRAY,"MODERN");
-        themes[2] = new Theme(Color.CYAN,Color.DARK_GRAY,"NEON1");
-        themes[3] = new Theme(Color.RED,Color.DARK_GRAY,"NEON2");
-        themes[4] = new Theme(Color.YELLOW,Color.PINK,"SPRING");
-        themes[5] = new Theme(Color.WHITE,Color.CYAN,"SUMMER");
-        themes[6] = new Theme(Color.ORANGE,Color.MAGENTA,"TROPICAL");
-        themes[7] = new Theme(Color.CYAN,Color.BLUE,"DEEP SEA");
+        themes[0] = new Theme(Color.WHITE,Color.BLACK,"WINTER1");
+        themes[1] = new Theme(new Color(0,0,0),new Color(195,195,195),"WINTER2");
+        themes[2] = new Theme(new Color(255,255,255),new Color(255,184,36),"SPRING1");
+        themes[3] = new Theme(new Color(109,109,109),new Color(255,164,209),"SPRING2");
+        themes[4] = new Theme(new Color(18,95,41),new Color(143,188,75),"SUMMER1");
+        themes[5] = new Theme(new Color(63,72,204),new Color(130,192,255),"SUMMER2");
+        themes[6] = new Theme(new Color(18,74,0),new Color(255,136,57),"AUTUMN1");
+        themes[7] = new Theme(new Color(255,255,255),new Color(128,64,0),"AUTUMN2");
         syncUiWithTheme(themes[0]);
     }
 
