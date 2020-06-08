@@ -38,9 +38,9 @@ public class WatchGUI extends JFrame {
 	 */
 	public WatchGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 562, 160);
+		setBounds(100, 100, 312, 178);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.LIGHT_GRAY);
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -54,45 +54,13 @@ public class WatchGUI extends JFrame {
 			e.printStackTrace();
 		}
 
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.DARK_GRAY);
-		panel.setBounds(74, 10, 400, 100);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		
-		JPanel lower_panel = new JPanel();
-		lower_panel.setBackground(Color.DARK_GRAY);
-		lower_panel.setBounds(12, 46, 376, 44);
-		panel.add(lower_panel);
-		lower_panel.setLayout(null);
-		
-		JLabel lower_segment = new JLabel("00000000");
-		lower_segment.setHorizontalAlignment(SwingConstants.CENTER);
-		lower_segment.setFont(new Font("Digital dream", Font.TRUETYPE_FONT, 35));
-		lower_segment.setForeground(Color.LIGHT_GRAY);
-		lower_segment.setBounds(0, 0, 376, 44);
-		lower_panel.add(lower_segment);
-		
-		JPanel upper_panel = new JPanel();
-		upper_panel.setBounds(12, 10, 376, 26);
-		panel.add(upper_panel);
-		upper_panel.setBackground(Color.DARK_GRAY);
-		upper_panel.setLayout(null);
-		
-		JLabel upper_segment = new JLabel("000000000000");
-		upper_segment.setHorizontalAlignment(SwingConstants.CENTER);
-		upper_segment.setFont(new Font("Digital dream", Font.TRUETYPE_FONT, 24));
-		upper_segment.setBounds(0, 0, 376, 26);
-		upper_panel.add(upper_segment);
-		upper_segment.setForeground(Color.LIGHT_GRAY);
-
 		System system = new System();
 		system.initWatch();
 
 
 		JButton button_a = new JButton("");
 		button_a.setBackground(Color.GRAY);
-		button_a.setBounds(0, 10, 71, 23);
+		button_a.setBounds(0, 10, 15, 40);
 		button_a.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -104,7 +72,7 @@ public class WatchGUI extends JFrame {
 		
 		JButton button_c = new JButton("");
 		button_c.setBackground(Color.GRAY);
-		button_c.setBounds(0, 88, 71, 23);
+		button_c.setBounds(0, 90, 15, 40);
 		button_c.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -115,7 +83,7 @@ public class WatchGUI extends JFrame {
 		
 		JButton button_d = new JButton("");
 		button_d.setBackground(Color.GRAY);
-		button_d.setBounds(475, 88, 71, 23);
+		button_d.setBounds(277, 90, 15, 40);
 		button_d.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -126,7 +94,7 @@ public class WatchGUI extends JFrame {
 		
 		JButton button_b = new JButton("");
 		button_b.setBackground(Color.GRAY);
-		button_b.setBounds(475, 10, 71, 23);
+		button_b.setBounds(277, 10, 15, 40);
 		button_b.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -134,6 +102,44 @@ public class WatchGUI extends JFrame {
 			}
 		});
 		contentPane.add(button_b);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.DARK_GRAY);
+		panel_1.setBounds(16, 10, 260, 120);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+				JPanel panel = new JPanel();
+				panel.setBounds(3, 3, 254, 114);
+				panel_1.add(panel);
+				panel.setBackground(Color.WHITE);
+				panel.setLayout(null);
+				
+				JPanel lower_panel = new JPanel();
+				lower_panel.setBackground(Color.WHITE);
+				lower_panel.setBounds(0, 46, 254, 58);
+				panel.add(lower_panel);
+				lower_panel.setLayout(null);
+				
+				JLabel lower_segment = new JLabel("00000000");
+				lower_segment.setHorizontalAlignment(SwingConstants.CENTER);
+				lower_segment.setFont(new Font("Digital dream", Font.PLAIN, 38));
+				lower_segment.setForeground(Color.LIGHT_GRAY);
+				lower_segment.setBounds(0, 0, 254, 58);
+				lower_panel.add(lower_segment);
+				
+				JPanel upper_panel = new JPanel();
+				upper_panel.setBounds(0, 10, 254, 26);
+				panel.add(upper_panel);
+				upper_panel.setBackground(Color.WHITE);
+				upper_panel.setLayout(null);
+				
+				JLabel upper_segment = new JLabel("000000000000");
+				upper_segment.setHorizontalAlignment(SwingConstants.CENTER);
+				upper_segment.setFont(new Font("Digital dream", Font.PLAIN, 25));
+				upper_segment.setBounds(0, 0, 254, 26);
+				upper_panel.add(upper_segment);
+				upper_segment.setForeground(Color.LIGHT_GRAY);
 
 		Thread displayUpdater = new Thread(new Runnable() {
 			@Override

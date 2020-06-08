@@ -145,13 +145,13 @@ public class Time {
             buffer = "0" + buffer;
         }
         temp += buffer;
-        temp += ":";
+        temp += ".";
         buffer = mounth + "";
         if(buffer.length() < 2){
             buffer = "0" + buffer;
         }
         temp += buffer;
-        temp += ":";
+        temp += ".";
         buffer = day + "";
         if(buffer.length() < 2){
             buffer = "0" + buffer;
