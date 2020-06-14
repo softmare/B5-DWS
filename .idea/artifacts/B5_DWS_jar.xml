@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="B5-DWS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/B5_DWS_jar</output-path>
+    <root id="archive" name="B5-DWS.jar">
+      <element id="module-output" name="B5-DWS" />
+    </root>
+  </artifact>
+</component>
