@@ -93,17 +93,19 @@ public class Time {
     public void addTime(Time target){
         seconds += target.getSeconds();
         if(seconds < 0){
-            seconds += 24;
+            seconds  = 0;
         }
-        if(seconds > 23){
-            seconds -= 24;
+        if(seconds > 59){
+            seconds -= 60;
+            minute ++;
         }
         minute += target.getMinute();
         if(minute < 0){
-            minute += 24;
+            minute = 0;
         }
-        if(minute > 23){
-            minute -= 24;
+        if(minute > 59){
+            minute -= 60;
+            hour ++;
         }
         hour += target.getHour();
         if(hour < 0){
@@ -145,13 +147,13 @@ public class Time {
             buffer = "0" + buffer;
         }
         temp += buffer;
-        temp += ":";
+        temp += ".";
         buffer = mounth + "";
         if(buffer.length() < 2){
             buffer = "0" + buffer;
         }
         temp += buffer;
-        temp += ":";
+        temp += ".";
         buffer = day + "";
         if(buffer.length() < 2){
             buffer = "0" + buffer;
