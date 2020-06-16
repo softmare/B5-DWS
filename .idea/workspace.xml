@@ -30,10 +30,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d4f68cd-6d3f-4a4c-9105-7235457d20d3" name="Default Changelist" comment="Time Class Fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020-06-03__5_03__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020-06-03_오후_5_03_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B5_DWS_jar.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/B5_DWS_jar/B5-DWS.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/B5_DWS_jar/B5-DWS.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/resources/DIGITALDREAM.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B5-DWS/resources/beep.wav" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
@@ -237,10 +238,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1094" y="366" width="396" height="267" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591171460561" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1591625173792">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1592213182797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591625173792" />
+    <state x="461" y="164" key="SettingsEditor/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592213182797" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591167305743" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1591171986763">
       <screen x="0" y="0" width="1920" height="1040" />
