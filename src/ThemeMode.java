@@ -1,15 +1,15 @@
 import java.awt.*;
 
 public class ThemeMode implements Mode{
-    int theme_index = 0;
-    Theme[] themes = new Theme[8];
-    Segment segment;
+    public int theme_index = 0;
+    public Theme[] themes = new Theme[8];
+    public Segment segment;
 
     public ThemeMode(Segment segment){
         this.segment = segment;
     }
 
-    void initThemeMode() {
+    public void initThemeMode() {
         themes[0] = new Theme(Color.WHITE,Color.BLACK,"WINTER1");
         themes[1] = new Theme(new Color(0,0,0),new Color(195,195,195),"WINTER2");
         themes[2] = new Theme(new Color(255,255,255),new Color(255,184,36),"SPRING1");
@@ -21,23 +21,23 @@ public class ThemeMode implements Mode{
         syncUiWithTheme(themes[0]);
     }
 
-    void nextTheme() {
+    public void nextTheme() {
         if(theme_index < themes.length) theme_index++;
         if(theme_index == themes.length) theme_index = 0;
         displayCurrentTheme();
     }
 
-    void prevTheme() {
+    public void prevTheme() {
         if(theme_index > -1 ) theme_index--;
         if(theme_index == -1) theme_index = themes.length - 1;
         displayCurrentTheme();
     }
 
-    void decideTheme() {
+    public void decideTheme() {
         syncUiWithTheme(themes[theme_index]);
     }
 
-    void syncUiWithTheme(Theme theme) {
+    public void syncUiWithTheme(Theme theme) {
         segment.setTextColor(theme.getText());
         segment.setBackgroundColor(theme.getBackground());
     }
@@ -67,7 +67,7 @@ public class ThemeMode implements Mode{
         displayCurrentTheme();
     }
 
-    private void displayCurrentTheme(){
+    public void displayCurrentTheme(){
         segment.setSegmentUpper("",false);
         segment.setSegmentLower(themes[theme_index].getName(),true);
     }

@@ -1,8 +1,8 @@
 public class CurrentTimeMode implements Mode{
-    private TimeManager timeManager;    // 현재 시간을 계산해주는 모듈을 저장하고 있는 변수.
-    private Thread currentTimeUpdater;
-    private Segment segment;
-    private boolean is_watch_running = false;
+    public TimeManager timeManager;    // 현재 시간을 계산해주는 모듈을 저장하고 있는 변수.
+    public Thread currentTimeUpdater;
+    public Segment segment;
+    public boolean is_watch_running = false;
 
 
     public CurrentTimeMode(Segment segment){
@@ -32,7 +32,7 @@ public class CurrentTimeMode implements Mode{
         currentTimeUpdater.start();
     }
 
-    private void SyncWithCurrentTime() {
+    public void SyncWithCurrentTime() {
         Time curr_time;
         curr_time = timeManager.getCurrentTime();
         segment.setSegmentUpper(curr_time.makeSugarStringYear(), true);

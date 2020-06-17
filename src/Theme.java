@@ -1,8 +1,8 @@
 import java.awt.*;
 
 public class Theme {
-    private Color text, background;
-    private String name;
+    public Color text, background;
+    public String name;
     public Theme(Color text, Color background, String name){
         this.text = text;
         this.background = background;

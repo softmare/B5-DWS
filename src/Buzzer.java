@@ -4,12 +4,12 @@ import java.net.URL;
 
 public class Buzzer {
 
-    private boolean is_buzzer_running = false;
-    private Thread sound_player;
-    private Thread reserve;
-    private ModeManagerInteracter instance;
-    private final static long RESERVE_OFF_TIME_IN_MIL = 30000;
-    private static Buzzer singleton;
+    public boolean is_buzzer_running = false;
+    public Thread sound_player;
+    public Thread reserve;
+    public ModeManagerInteracter instance;
+    public final static long RESERVE_OFF_TIME_IN_MIL = 30000;
+    public static Buzzer singleton;
 
     public static Buzzer getInstance(){
         if(singleton == null){
@@ -18,7 +18,7 @@ public class Buzzer {
         return singleton;
     }
 
-    private Buzzer(){
+    public Buzzer(){
         sound_player = new Thread(new Runnable() {
             @Override
             public void run() {

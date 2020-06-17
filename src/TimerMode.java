@@ -1,16 +1,16 @@
 public class TimerMode implements Mode{
-    private boolean is_timer_running;
-    private boolean is_timer_started;
-    private boolean is_timer_used;
-    private Segment segment;
-    private ButtonActionCallback button_a;
-    private ButtonActionCallback button_b;
-    private ButtonActionCallback button_c;
-    private Time setted_time;
-    private Thread timer_runner;
-    private Buzzer buzzer;
+    public boolean is_timer_running;
+    public boolean is_timer_started;
+    public boolean is_timer_used;
+    public Segment segment;
+    public ButtonActionCallback button_a;
+    public ButtonActionCallback button_b;
+    public ButtonActionCallback button_c;
+    public Time setted_time;
+    public Thread timer_runner;
+    public Buzzer buzzer;
 
-    private int total_seconds;  // 분을 초로 바꾼 timer 시간
+    public int total_seconds;  // 분을 초로 바꾼 timer 시간
 
     public TimerMode(Segment segment) {
         is_timer_running = false;
@@ -64,7 +64,7 @@ public class TimerMode implements Mode{
         });
         timer_runner.start();
     }
-    private void startTimer() {
+    public void startTimer() {
         int set_minute;
         int set_seconds;
 
@@ -86,27 +86,27 @@ public class TimerMode implements Mode{
             displayTimer();
         }
     }
-    private void pauseTimer()  {
+    public void pauseTimer()  {
         if(is_timer_running == true) {
             is_timer_running = false;
             mappingTimerPause();
             displayTimer();
         }
     }
-    private void continueTimer() {
+    public void continueTimer() {
         if(checkTimerZero() == false) {
             is_timer_running = true;
             mappingTimerRunning();
             displayTimer();
         }
     }
-    private void cancelTimer() {
+    public void cancelTimer() {
         is_timer_running = false;
         is_timer_started = false;
         mappingTimerState();
         displayTimer();
     }
-    private void increaseTimerMinute() {
+    public void increaseTimerMinute() {
         if(setted_time.getMinute() < 59) {
             int set_minute = setted_time.getMinute();
             set_minute++;
@@ -116,7 +116,7 @@ public class TimerMode implements Mode{
         }
         displayTimer();
     }
-    private void increaseTimerSeconds() {
+    public void increaseTimerSeconds() {
         if(setted_time.getSeconds() < 59) {
             int set_seconds = setted_time.getSeconds();
             set_seconds++;
@@ -127,24 +127,24 @@ public class TimerMode implements Mode{
         displayTimer();
     }
 
-    private boolean checkTimerZero() {
+    public boolean checkTimerZero() {
         if(setted_time.getMinute() == 0 && setted_time.getSeconds() == 0) {
             return true;
         }
         return false;
     }
 
-    private boolean checkTimerEnded(){
+    public boolean checkTimerEnded(){
         return total_seconds == 0? true : false;
     }
 
 
-    private void decreaseTimer() {
+    public void decreaseTimer() {
         total_seconds--;
         displayTimer();
     }
 
-    private void mappingTimerState() {
+    public void mappingTimerState() {
         button_a = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {
@@ -164,7 +164,7 @@ public class TimerMode implements Mode{
             }
         };
     }
-    private void mappingTimerRunning() {
+    public void mappingTimerRunning() {
         button_a = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {
@@ -184,7 +184,7 @@ public class TimerMode implements Mode{
             }
         };
     }
-    private void mappingTimerPause() {
+    public void mappingTimerPause() {
         button_a = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {

@@ -1,11 +1,11 @@
 public class ModeManagerInteracter {
-    private static ModeManagerInteracter instance = null;
+    public static ModeManagerInteracter instance = null;
 
-    private MethodCallback forced_action = null;
-    private StandardCallback cancel_forced = null;
+    public MethodCallback forced_action = null;
+    public StandardCallback cancel_forced = null;
 
 
-    private ModeManagerInteracter(){}
+    public ModeManagerInteracter(){}
 
     public static ModeManagerInteracter getInstance(){
         if(instance == null){

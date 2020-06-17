@@ -1,9 +1,9 @@
 import java.awt.*;
 
 public class Segment {
-    private Color text_color, background_color;
-    private boolean upper_enabled, lower_enabled;
-    private String upper_segment,lower_segment;
+    public Color text_color, background_color;
+    public boolean upper_enabled, lower_enabled;
+    public String upper_segment,lower_segment;
 
     public Segment(){
         text_color = Color.WHITE;

@@ -1,20 +1,20 @@
 import java.lang.Thread;
 
 public class WorldTimeMode implements Mode {
-    TimeManager time_manager = TimeManager.getInstance();
-    Segment segment;
-    Thread world_time_updater = new Thread();
-    World[] worlds = new World[20];
-    int world_index = 0;
-    boolean locked = false;     // 초기에는 locked 되어있지 않으므로 false로 초기화
-    Time current_time = new Time();
-    boolean is_world_time = false;
+    public TimeManager time_manager = TimeManager.getInstance();
+    public Segment segment;
+    public Thread world_time_updater = new Thread();
+    public World[] worlds = new World[20];
+    public int world_index = 0;
+    public boolean locked = false;     // 초기에는 locked 되어있지 않으므로 false로 초기화
+    public Time current_time = new Time();
+    public boolean is_world_time = false;
 
     public WorldTimeMode(Segment segment){
         this.segment = segment;
     }
 
-    void initWorldTimeMode() {
+    public void initWorldTimeMode() {
         worlds[0] = new World(new Time(0,0,-17,0,0,0),"WASHINGTON");
         worlds[1] = new World(new Time(0,0,-9,0,0,0),"LONDON");
         worlds[2] = new World(new Time(0,0,-8,0,0,0),"PARIS");
@@ -56,39 +56,39 @@ public class WorldTimeMode implements Mode {
         world_time_updater.start();
     }
 
-    void nextWorldTime() {
+    public void nextWorldTime() {
         increaseWorldTimeIndex();
 
         // 변경된 나라로 시간 동기화
         syncWorldTime();
     }
 
-    void prevWorldTime() {
+    public void prevWorldTime() {
         decreaseWorldTimeIndex();
 
         // 변경된 나라로 시간 동기화
         syncWorldTime();
     }
 
-    void increaseWorldTimeIndex() {
+    public void increaseWorldTimeIndex() {
         if(world_index < worlds.length) world_index++;
         if(world_index == worlds.length) world_index = 0;
     }
 
-    void decreaseWorldTimeIndex() {
+    public void decreaseWorldTimeIndex() {
         if(world_index > -1) world_index--;
         if(world_index == -1) world_index = worlds.length-1;
     }
 
-    void holdCurrentWorldTime() {
+    public void holdCurrentWorldTime() {
         locked = true;
     }
 
-    void releaseCurrentWorldTimeRock() {
+    public void releaseCurrentWorldTimeRock() {
         locked = false;
     }
 
-    void syncWorldTime() {
+    public void syncWorldTime() {
         current_time = time_manager.getCurrentTime();   // 현재 시간
         current_time.addTime(worlds[world_index].weight);    // 현재시간 + 나라별 시간차 가중치
         // 변경된 값 세그먼트에 출력 SetSegmentUpper(“국가명”)

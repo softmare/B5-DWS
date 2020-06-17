@@ -2,7 +2,7 @@ public class Alarm{
     int hour;
     int minute;
     int actived; // -1: none, 0: disable, 1:ensable
-    private String[] state = {"NONE","OFF","ON"};
+    public String[] state = {"NONE","OFF","ON"};
     Time ringTime;
 
     public String getState(){

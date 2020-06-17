@@ -1,12 +1,12 @@
 public class StopWatchMode implements Mode{
-    private boolean is_stop_watch_running = false;
-    private boolean is_stop_watch_started = false;
-    private Thread stop_watch_running;
-    private Time elapsed_time;  // 스톱워치에 설정된 현재 상태 분과 초로만! (밀리초는 버리는걸로)
-    private ButtonActionCallback button_a;
-    private ButtonActionCallback button_b;
-    private ButtonActionCallback button_c;
-    private Segment segment;
+    public boolean is_stop_watch_running = false;
+    public boolean is_stop_watch_started = false;
+    public Thread stop_watch_running;
+    public Time elapsed_time;  // 스톱워치에 설정된 현재 상태 분과 초로만! (밀리초는 버리는걸로)
+    public ButtonActionCallback button_a;
+    public ButtonActionCallback button_b;
+    public ButtonActionCallback button_c;
+    public Segment segment;
 
     public StopWatchMode(Segment segment) {
         this.segment = segment;
@@ -55,23 +55,23 @@ public class StopWatchMode implements Mode{
         elapsed_time.setSeconds(0);
         elapsed_time.setMinute(0);
     }
-    private void startStopWatch() {
+    public void startStopWatch() {
         is_stop_watch_running = true;
         is_stop_watch_started = true;
         mappingStopWatchRunning();
         displayStopWatchState();
     }
-    private void pauseStopWatch() {
+    public void pauseStopWatch() {
         is_stop_watch_running = false;
         mappingStopWatchPause();
         displayStopWatchState();
     }
-    private void continueStopWatch() {
+    public void continueStopWatch() {
         is_stop_watch_running = true;
         mappingStopWatchRunning();
         displayStopWatchState();
     }
-    private void increaseStopWatchSeconds() {
+    public void increaseStopWatchSeconds() {
         int set_seconds;
         int set_minute;
 
@@ -92,7 +92,7 @@ public class StopWatchMode implements Mode{
         displayStopWatchState();
     }
     // 스탑워치의 한계치 59분 59초
-    private boolean testStopWatchMax() {
+    public boolean testStopWatchMax() {
         if(elapsed_time.getMinute() == 59 && elapsed_time.getSeconds() == 59) {
             return true;
         } else {
@@ -100,7 +100,7 @@ public class StopWatchMode implements Mode{
         }
     }
     // 중단한 후에만 reset 가능
-    private void resetStopWatch() {
+    public void resetStopWatch() {
         is_stop_watch_running = false;
         is_stop_watch_started = false;
         elapsed_time.setSeconds(0);
@@ -108,7 +108,7 @@ public class StopWatchMode implements Mode{
         mappingStopWatchState();
         displayStopWatchState();
     }
-    private void mappingStopWatchState() {
+    public void mappingStopWatchState() {
         button_a = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {
@@ -128,7 +128,7 @@ public class StopWatchMode implements Mode{
             }
         };
     }
-    private void mappingStopWatchRunning() {
+    public void mappingStopWatchRunning() {
         button_a = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {
@@ -148,7 +148,7 @@ public class StopWatchMode implements Mode{
             }
         };
     }
-    private void mappingStopWatchPause() {
+    public void mappingStopWatchPause() {
         button_a = new ButtonActionCallback() {
             @Override
             public void OnButtonPressed() {
@@ -194,7 +194,7 @@ public class StopWatchMode implements Mode{
         displayStopWatchState();
     }
 
-    private void displayStopWatchState(){
+    public void displayStopWatchState(){
         if(!is_stop_watch_started){
             segment.setSegmentUpper("STOPWATCH",true);
             segment.setSegmentLower("00:00",true);

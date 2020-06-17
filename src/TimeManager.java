@@ -3,10 +3,10 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class TimeManager {
-    private static TimeManager instance = null;
-    private LocalDateTime local_date_time;
+    public static TimeManager instance = null;
+    public LocalDateTime local_date_time;
 
-    private TimeManager(){ }
+    public TimeManager(){ }
 
     public static TimeManager getInstance(){
         if(instance == null){

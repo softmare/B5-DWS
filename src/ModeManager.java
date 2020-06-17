@@ -1,15 +1,15 @@
 public class ModeManager implements Mode{
     //Fields
-    private Segment segment;
-    private ButtonActionCallback on_button_d_pressed;
-    private Mode[] unused_modes = new Mode[2];
-    private Mode[] used_modes = new Mode[4];
-    private Mode current_mode = used_modes[0];
-    private int mode_index = 0;
-    private StandardCallback forced_action = null;
-    private boolean overwrite_action_exist = false;
-    private boolean is_main_screen = true;
-    private ModeManagerInteracter instance;
+    public Segment segment;
+    public ButtonActionCallback on_button_d_pressed;
+    public Mode[] unused_modes = new Mode[2];
+    public Mode[] used_modes = new Mode[4];
+    public Mode current_mode = used_modes[0];
+    public int mode_index = 0;
+    public StandardCallback forced_action = null;
+    public boolean overwrite_action_exist = false;
+    public boolean is_main_screen = true;
+    public ModeManagerInteracter instance;
 
 
 

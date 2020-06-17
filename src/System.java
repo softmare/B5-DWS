@@ -2,8 +2,8 @@ import java.awt.*;
 
 public class System {
 
-    private Segment segment;
-    private ModeManager mode_manager;
+    public Segment segment;
+    public ModeManager mode_manager;
 
 
     public System(){

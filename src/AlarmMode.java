@@ -3,25 +3,25 @@ import java.util.*;
 
 public class AlarmMode implements Mode{
 
-    private TimeManager timeManager;
-    private Segment segment;
-    private Alarm[] alarms = new Alarm[4];
-    private int alarm_index;
-    private ButtonActionCallback button_a;
-    private ButtonActionCallback button_b;
-    private ButtonActionCallback button_c;
-    private Thread alarmChecker;
-    private Buzzer buzzer;
-    private boolean isAlarmSettingMode;
-    Time current_time = new Time();
-    private int hour,minute;
+    public TimeManager timeManager;
+    public Segment segment;
+    public Alarm[] alarms = new Alarm[4];
+    public int alarm_index;
+    public ButtonActionCallback button_a;
+    public ButtonActionCallback button_b;
+    public ButtonActionCallback button_c;
+    public Thread alarmChecker;
+    public Buzzer buzzer;
+    public boolean isAlarmSettingMode;
+    public Time current_time = new Time();
+    public int hour,minute;
 
     public AlarmMode(Segment segment){
         this.segment = segment;
     }
 
 
-    void initAlarmMode(){
+    public void initAlarmMode(){
         buzzer = Buzzer.getInstance();
         timeManager = TimeManager.getInstance();
         MappingAlarmMode();
@@ -52,21 +52,21 @@ public class AlarmMode implements Mode{
         alarmChecker.start();
     }
 
-    void enableAlarm(){
+    public void enableAlarm(){
         //initAlarm에서 생성한 리스트에서 해당 인덱스에 해당하는 값을 불러와
         //actived를 true로 바꿔준다.
         alarms[alarm_index].actived = 1;
         displayCurrentAlarm();
     }
 
-    void disableAlarm(){
+    public void disableAlarm(){
         //initAlarm에서 생성한 리스트에서 해당 인덱스에 해당하는 값을 불러와
         //actived를 false로 바꿔준다.
         alarms[alarm_index].actived = 0;
         displayCurrentAlarm();
     }
 
-    boolean checkRingAlarmExist(){
+    public boolean checkRingAlarmExist(){
         //activated가 true이고
         //alarmlist의 시간과 currenttime이 같다면
         //onbuzzer를 호출한다.
@@ -82,16 +82,16 @@ public class AlarmMode implements Mode{
         return false;
     }
 
-    void increasealarm_index(){
+    public void increasealarm_index(){
         //alarm index를 1증가시켜주는 함수
         alarm_index++;
     }
 
-    void addAlarm(){
+    public void addAlarm(){
         MappingAlarmTimeSettingMode();
     }
 
-    void increaseOneHour(){
+    public void increaseOneHour(){
         //hour++
         alarms[alarm_index].hour += 1;
         if(alarms[alarm_index].hour > 23){
@@ -100,7 +100,7 @@ public class AlarmMode implements Mode{
         displayCurrentAlarm();
     }
 
-    void increasefiveMinute(){
+    public void increasefiveMinute(){
         //fiveMinute++
         alarms[alarm_index].minute += 5;
         if(alarms[alarm_index].minute > 55){
@@ -109,7 +109,7 @@ public class AlarmMode implements Mode{
         displayCurrentAlarm();
     }
 
-    void alarmInitTime(){
+    public void alarmInitTime(){
         //alarmTime -> 00
         //activated = false
         alarms[alarm_index].hour = 0;
@@ -117,7 +117,7 @@ public class AlarmMode implements Mode{
         alarms[alarm_index].actived = 0;
     }
 
-    void MappingAlarmTimeSettingMode(){
+    public void MappingAlarmTimeSettingMode(){
         button_a = new ButtonActionCallback(){
 
             @Override
@@ -144,7 +144,7 @@ public class AlarmMode implements Mode{
         };
     }
 
-    void MappingAlarmMode(){
+    public void MappingAlarmMode(){
         button_a = new ButtonActionCallback(){
             @Override
             public void OnButtonPressed() {
@@ -174,19 +174,19 @@ public class AlarmMode implements Mode{
         };
     }
 
-    void nextAlarm(){
+    public void nextAlarm(){
         alarm_index++;
         if(alarm_index > 3) alarm_index = 0;
         displayCurrentAlarm();
     }
 
-    void decideAlarm() {
+    public void decideAlarm() {
         alarms[alarm_index].actived = 1;
         MappingAlarmMode();
         displayCurrentAlarm();
     }
 
-    void deleteAlarm() {
+    public void deleteAlarm() {
         alarms[alarm_index].actived = -1;
         alarms[alarm_index].hour = 0;
         alarms[alarm_index].minute = 0;
@@ -221,7 +221,7 @@ public class AlarmMode implements Mode{
     }
 
 
-    private void displayCurrentAlarm(){
+    public void displayCurrentAlarm(){
         int hour, min;
         hour = alarms[alarm_index].hour;
         min = alarms[alarm_index].minute;

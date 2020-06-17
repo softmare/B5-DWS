@@ -2,8 +2,8 @@ import java.time.LocalDateTime;
 import java.util.IllegalFormatCodePointException;
 
 public class Time {
-    private int seconds, minute, hour;
-    private int year, mounth, day;
+    public int seconds, minute, hour;
+    public int year, mounth, day;
 
     public Time(){
         this.seconds = 0;
