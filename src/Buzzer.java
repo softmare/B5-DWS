@@ -44,6 +44,9 @@ public final class Buzzer {
                     java.lang.System.out.println("EX:AudioFileNotValid");
                 } catch (IOException | InterruptedException e) {
                     java.lang.System.out.println("EX:Inturrupted");
+                    if (e instanceof InterruptedException) {
+                        Thread.currentThread().interrupt();
+                    }
                 }
             }
         });
@@ -69,7 +72,7 @@ public final class Buzzer {
                     Thread.sleep(RESERVE_OFF_TIME_IN_MIL);
                     OffBuzzer();
                 } catch (InterruptedException e) {
-
+                    Thread.currentThread().interrupt();
                 }
             }
         });

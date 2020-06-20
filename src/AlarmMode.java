@@ -13,7 +13,7 @@ public class AlarmMode implements Mode{
     private Thread alarmChecker;
     private Buzzer buzzer;
     private boolean isAlarmSettingMode;
-    Time current_time = new Time();
+    private Time current_time = new Time();
     private int hour,minute;
 
     public AlarmMode(Segment segment){
@@ -37,13 +37,13 @@ public class AlarmMode implements Mode{
                     try {
                         Thread.sleep(6000);
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        Thread.currentThread().interrupt();
                     }
                     if(checkRingAlarmExist()){
                         try {
                             Thread.sleep(60000);
                         } catch (InterruptedException e) {
-                            e.printStackTrace();
+                            Thread.currentThread().interrupt();
                         }
                     }
                 }
@@ -55,14 +55,14 @@ public class AlarmMode implements Mode{
     void enableAlarm(){
         //initAlarm에서 생성한 리스트에서 해당 인덱스에 해당하는 값을 불러와
         //actived를 true로 바꿔준다.
-        alarms[alarm_index].actived = 1;
+        alarms[alarm_index].setActive(1);
         displayCurrentAlarm();
     }
 
     void disableAlarm(){
         //initAlarm에서 생성한 리스트에서 해당 인덱스에 해당하는 값을 불러와
         //actived를 false로 바꿔준다.
-        alarms[alarm_index].actived = 0;
+        alarms[alarm_index].setActive(0);
         displayCurrentAlarm();
     }
 
@@ -72,7 +72,7 @@ public class AlarmMode implements Mode{
         //onbuzzer를 호출한다.
         current_time = timeManager.getCurrentTime();
         for(int i=0;i<4;i++){
-            if(alarms[i].actived == 1){
+            if(alarms[i].getActive() == 1){
                 if(alarms[i].getHour() == timeManager.getCurrentTime().getHour() && alarms[i].getMinute() == timeManager.getCurrentTime().getMinute()){
                     buzzer.OnBuzzer();
                     return true;
@@ -93,18 +93,18 @@ public class AlarmMode implements Mode{
 
     void increaseOneHour(){
         //hour++
-        alarms[alarm_index].hour += 1;
-        if(alarms[alarm_index].hour > 23){
-            alarms[alarm_index].hour = 0;
+        alarms[alarm_index].setHour(alarms[alarm_index].getHour() + 1);
+        if(alarms[alarm_index].getHour() > 23){
+            alarms[alarm_index].setHour(0);
         }
         displayCurrentAlarm();
     }
 
     void increasefiveMinute(){
         //fiveMinute++
-        alarms[alarm_index].minute += 5;
-        if(alarms[alarm_index].minute > 55){
-            alarms[alarm_index].minute = 0;
+        alarms[alarm_index].setMinute(alarms[alarm_index].getMinute() + 5);
+        if(alarms[alarm_index].getMinute() > 55){
+            alarms[alarm_index].setMinute(0);
         }
         displayCurrentAlarm();
     }
@@ -112,9 +112,9 @@ public class AlarmMode implements Mode{
     void alarmInitTime(){
         //alarmTime -> 00
         //activated = false
-        alarms[alarm_index].hour = 0;
-        alarms[alarm_index].minute = 0;
-        alarms[alarm_index].actived = 0;
+        alarms[alarm_index].setHour(0);
+        alarms[alarm_index].setMinute(0);
+        alarms[alarm_index].setActive(0);
     }
 
     void MappingAlarmTimeSettingMode(){
@@ -181,15 +181,15 @@ public class AlarmMode implements Mode{
     }
 
     void decideAlarm() {
-        alarms[alarm_index].actived = 1;
+        alarms[alarm_index].setActive(1);
         MappingAlarmMode();
         displayCurrentAlarm();
     }
 
     void deleteAlarm() {
-        alarms[alarm_index].actived = -1;
-        alarms[alarm_index].hour = 0;
-        alarms[alarm_index].minute = 0;
+        alarms[alarm_index].setActive(-1);
+        alarms[alarm_index].setMinute(0);
+        alarms[alarm_index].setHour(0);
         displayCurrentAlarm();
     }
 
@@ -223,8 +223,8 @@ public class AlarmMode implements Mode{
 
     private void displayCurrentAlarm(){
         int hour, min;
-        hour = alarms[alarm_index].hour;
-        min = alarms[alarm_index].minute;
+        hour = alarms[alarm_index].getHour();
+        min = alarms[alarm_index].getMinute();
         segment.setSegmentUpper((alarm_index + 1) + "    " + alarms[alarm_index].getState() , true);
         segment.setSegmentLower( ((hour < 10)?"0" + hour : hour)+ ":" + ((min < 10)?"0" + min : min), true);
     }

@@ -27,7 +27,7 @@ public class WatchGUI extends JFrame {
 					WatchGUI frame = new WatchGUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
-					e.printStackTrace();
+
 				}
 			}
 		});
@@ -46,12 +46,12 @@ public class WatchGUI extends JFrame {
 		contentPane.setLayout(null);
 		Font font = null;
 		try {
-			InputStream is = this.getClass().getClassLoader().getResourceAsStream("DIGITALDREAM.ttf");
+			InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("DIGITALDREAM.ttf");
 			GraphicsEnvironment ge =
 					GraphicsEnvironment.getLocalGraphicsEnvironment();
 			ge.registerFont(Font.createFont(Font.PLAIN, is));
 		} catch (IOException |FontFormatException e) {
-			e.printStackTrace();
+
 		}
 
 		System system = new System();
@@ -155,7 +155,7 @@ public class WatchGUI extends JFrame {
 					try {
 						Thread.sleep(50);
 					} catch (InterruptedException e) {
-						e.printStackTrace();
+						Thread.currentThread().interrupt();
 					}
 				}
 			}

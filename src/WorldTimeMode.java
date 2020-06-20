@@ -1,14 +1,14 @@
 import java.lang.Thread;
 
 public class WorldTimeMode implements Mode {
-    TimeManager time_manager = TimeManager.getInstance();
-    Segment segment;
-    Thread world_time_updater = new Thread();
-    World[] worlds = new World[20];
-    int world_index = 0;
-    boolean locked = false;     // 초기에는 locked 되어있지 않으므로 false로 초기화
-    Time current_time = new Time();
-    boolean is_world_time = false;
+    private TimeManager time_manager = TimeManager.getInstance();
+    private Segment segment;
+    private Thread world_time_updater = new Thread();
+    private World[] worlds = new World[20];
+    private int world_index = 0;
+    private boolean locked = false;     // 초기에는 locked 되어있지 않으므로 false로 초기화
+    private Time current_time = new Time();
+    private boolean is_world_time = false;
 
     public WorldTimeMode(Segment segment){
         this.segment = segment;
@@ -45,7 +45,7 @@ public class WorldTimeMode implements Mode {
                             if(is_world_time)
                             syncWorldTime();
                         } catch (InterruptedException e) {
-                            e.printStackTrace();
+                            Thread.currentThread().interrupt();
                         }
                     }else{
                         Thread.yield();

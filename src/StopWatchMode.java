@@ -47,7 +47,7 @@ public class StopWatchMode implements Mode{
                         }
                     }
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
                 }
             }
         });
