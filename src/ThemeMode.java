@@ -1,9 +1,9 @@
 import java.awt.*;
 
 public class ThemeMode implements Mode{
-    int theme_index = 0;
-    Theme[] themes = new Theme[8];
-    Segment segment;
+    private int theme_index = 0;
+    private Theme[] themes = new Theme[8];
+    private Segment segment;
 
     public ThemeMode(Segment segment){
         this.segment = segment;
