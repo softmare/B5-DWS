@@ -2,7 +2,7 @@ import javax.sound.sampled.*;
 import java.io.IOException;
 import java.net.URL;
 
-public class Buzzer {
+public final class Buzzer {
 
     private boolean is_buzzer_running = false;
     private Thread sound_player;
@@ -22,7 +22,7 @@ public class Buzzer {
         sound_player = new Thread(new Runnable() {
             @Override
             public void run() {
-                URL url  = this.getClass().getClassLoader().getResource("beep.wav");
+                URL url  = Thread.currentThread().getContextClassLoader().getResource("beep.wav");
                 try {
                     while(true){
                         if(is_buzzer_running){
@@ -39,11 +39,11 @@ public class Buzzer {
                         }
                     }
                 } catch (LineUnavailableException e) {
-                    e.printStackTrace();
+                    java.lang.System.out.println("EX:SoundError");
                 } catch (UnsupportedAudioFileException e) {
-                    e.printStackTrace();
+                    java.lang.System.out.println("EX:AudioFileNotValid");
                 } catch (IOException | InterruptedException e) {
-                    e.printStackTrace();
+                    java.lang.System.out.println("EX:Inturrupted");
                 }
             }
         });
